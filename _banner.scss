@@ -1,0 +1,143 @@
+@import "var";
+@import "mixins";
+
+header {
+	.banner {
+		padding: 0 15px;
+		background-image: url(/imgs/img_bg_page_title.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+
+		.banner__con {
+			padding-top: 80px;
+			display: flex;
+
+			.banner__item1 {
+				width: 50%;
+				padding: 125px 0;
+
+        @include media-sm{
+          width: 100%;
+          padding: 90px 0 50px;
+        }
+
+				.banner__lgtxt {
+					font-size: 56px;
+					color: $white;
+
+					.edit1 {
+						color: transparent;
+						background: $lgtxt;
+						background-clip: text;
+					}
+				}
+
+				.banner__smtxt {
+					font-size: 20px;
+					color: $white;
+					margin: 29px 0 35px;
+				}
+
+				.btncon {
+					display: flex;
+					gap: 1em;
+
+					.banner__btn {
+						@include btn;
+						padding: 15px 35px;
+
+						.btnicon {
+							@include btnicon;
+						}
+					}
+				}
+			}
+
+			.banner__item2 {
+				width: 50%;
+				padding: 73px 17px 0 0;
+				position: relative;
+
+        @include media-sm{
+          display: none;
+        }
+
+				img {
+					width: 100%;
+          z-index: 1;
+				}
+
+        .banner__img1{
+          transition: all 1s ease;
+					animation: move 5s infinite;
+        }
+
+				.banner__img2 {
+					position: absolute;
+					left: 0;
+          transition: all 1s ease;
+					animation: move 5s infinite;
+				}
+
+				@keyframes move {
+					0% {
+						transform: translateX(-10px);
+					}
+					50% {
+						transform: translateX(10px);
+          }
+					100% {
+						transform: translateX(-10px);
+					}
+				}
+
+        .balls{
+          display: block;
+          border-radius: 50%;
+          background: $lgtxt;
+					animation: move1 5s infinite;
+        }
+
+        @keyframes move1 {
+					0% {
+						transform: translateX(8px);
+					}
+					50% {
+						transform: translateX(-5px);
+          }
+					100% {
+						transform: translateX(8px);
+					}
+				}
+
+        .ball1{
+          @extend .balls;
+          position: absolute;
+          height: 50px;
+          width: 50px;
+          top: 3em;
+          right: 7em;
+        }
+
+        .ball2{
+          @extend .balls;
+          position: absolute;
+          top: 6.5em;
+          left: 10em;
+          height: 20px;
+          width: 20px;
+        }
+        
+        .ball3{
+          @extend .balls;
+          position: absolute;
+          top: 22em;
+          left: 25em;
+          height: 40px;
+          width: 40px;
+        }
+			}
+		}
+	}
+}

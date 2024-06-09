@@ -1,0 +1,44 @@
+@mixin flex-items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin btn {
+	@include flex-items;
+	gap: 0.5em;
+	padding: 12px 35px;
+	border: 2px solid $white;
+	border-radius: 50px;
+	font-size: 14px;
+	font-weight: 700;
+  font-family: inherit;
+	color: $white;
+  text-transform: capitalize;
+	background: transparent;
+	cursor: pointer;
+	transition: $normal-trans;
+
+	&:hover {
+		background: $white;
+		color: #5142fc;
+	}
+}
+
+@mixin btnicon {
+	display: block;
+	font-size: 20px;
+}
+
+/* ------------------------------- media-query ------------------------------ */
+@mixin media-sm {
+	@media (width < 767px) {
+		@content;
+	}
+}
+
+@mixin media-lg {
+	@media (767px < width < 1023px) {
+		@content;
+	}
+}

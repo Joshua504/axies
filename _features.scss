@@ -1,0 +1,56 @@
+@import "var";
+@import "mixins";
+
+.features {
+	padding: 69px 6px 82px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2em;
+
+	@include media-sm {
+		grid-template-columns: 1fr;
+	}
+	@include media-lg {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.features__item {
+		text-align: center;
+
+		.features__img {
+			margin-bottom: 25px;
+
+			&:hover {
+				 animation: rotate 0.5s forwards;
+			}
+		}
+
+		@keyframes rotate {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(180deg);
+			}
+		}
+
+		.features__lgtxt {
+			font-size: 24px;
+			text-transform: capitalize;
+			margin-bottom: 14px;
+			cursor: pointer;
+			transition: $normal-trans;
+
+			&:hover {
+				color: $txthov;
+			}
+		}
+
+		.features__smtxt {
+			font-size: 14px;
+			text-transform: capitalize;
+			color: $txtgy;
+			line-height: 22px;
+		}
+	}
+}
