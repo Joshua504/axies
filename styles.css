@@ -8,17 +8,16 @@
   outline: transparent;
   list-style: none;
   text-decoration: none;
-}
-
-body {
   font-family: "Urbanist", sans-serif;
 }
 
 /* --------------------------------- colors --------------------------------- */
 /* ------------------------------- transitions ------------------------------ */
+/* -------------------------- cards and subheading -------------------------- */
 /* ------------------------------- media-query ------------------------------ */
 /* --------------------------------- colors --------------------------------- */
 /* ------------------------------- transitions ------------------------------ */
+/* -------------------------- cards and subheading -------------------------- */
 /* ------------------------------- media-query ------------------------------ */
 header .navCon {
   position: absolute;
@@ -287,6 +286,7 @@ header .navCon .navcon__item2 .hamburger .bars {
 
 /* --------------------------------- colors --------------------------------- */
 /* ------------------------------- transitions ------------------------------ */
+/* -------------------------- cards and subheading -------------------------- */
 /* ------------------------------- media-query ------------------------------ */
 header .banner {
   padding: 0 15px;
@@ -430,6 +430,7 @@ header .banner .banner__con .banner__item2 .ball3 {
 
 /* --------------------------------- colors --------------------------------- */
 /* ------------------------------- transitions ------------------------------ */
+/* -------------------------- cards and subheading -------------------------- */
 /* ------------------------------- media-query ------------------------------ */
 .features {
   padding: 69px 6px 82px;
@@ -479,4 +480,163 @@ header .banner .banner__con .banner__item2 .ball3 {
   text-transform: capitalize;
   color: #CBCBD1;
   line-height: 22px;
+}
+
+/* --------------------------------- colors --------------------------------- */
+/* ------------------------------- transitions ------------------------------ */
+/* -------------------------- cards and subheading -------------------------- */
+/* ------------------------------- media-query ------------------------------ */
+main .auction {
+  padding: 58px 0 68px;
+  background: #000;
+}
+main .auction .auction__item1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 15px;
+  color: #1F1F2C;
+}
+main .auction .auction__item1 .subh__lgtxt {
+  font-size: 36px;
+  text-transform: capitalize;
+}
+main .auction .auction__item1 .subh__smtxt {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #181b81;
+  transition: all 0.5s linear;
+  color: #1F1F2C;
+}
+main .auction .auction__item1 .subh__smtxt:hover {
+  color: #181b81;
+}
+main .auction .auction__item2 {
+  padding-top: 24px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .auction .auction__item2 .card {
+  background: #fff;
+  padding: 20px 20px 13px;
+  border-radius: 25px;
+  position: relative;
+  transition: 1s ease;
+}
+main .auction .auction__item2 .card .card__imgcon {
+  position: relative;
+}
+main .auction .auction__item2 .card .card__imgcon .card__img {
+  border-radius: 20px;
+}
+main .auction .auction__item2 .card .card__imgcon .timer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  color: #1F1F2C;
+  height: 40px;
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 15.3em;
+  left: 4em;
+}
+main .auction .auction__item2 .card .card__imgcon .timer .timericon {
+  color: #181b81;
+  font-size: 25px;
+  margin-right: 10px;
+}
+main .auction .auction__item2 .card .card__imgcon .card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 12px 35px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  color: #fff;
+  text-transform: capitalize;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  background: #fff;
+  color: #1F1F2C;
+  position: absolute;
+  top: 9em;
+  left: 4em;
+  visibility: collapse;
+}
+main .auction .auction__item2 .card .card__imgcon .card__btn:hover {
+  background: #fff;
+  color: #5142fc;
+}
+main .auction .auction__item2 .card .card__imgcon .card__btn:hover {
+  background: #181b81;
+  color: #fff;
+  border: none;
+}
+main .auction .auction__item2 .card .card__imgcon .card__btn:hover .card__btnicon {
+  color: #fff;
+}
+main .auction .auction__item2 .card .card__imgcon .card__btn .card__btnicon {
+  color: #181b81;
+  display: block;
+  font-size: 20px;
+}
+main .auction .auction__item2 .card .card__info {
+  margin-top: 1em;
+}
+main .auction .auction__item2 .card .card__info .card__lgtxt {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+main .auction .auction__item2 .card .card__info .cardinfo__con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+main .auction .auction__item2 .card .card__info .cardinfo__con .info__con {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main .auction .auction__item2 .card .card__info .cardinfo__con .info__con .info__img {
+  border-radius: 15px;
+}
+main .auction .auction__item2 .card .card__info .cardinfo__con .info__con .card__smtxt {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #CBCBD1;
+}
+main .auction .auction__item2 .card .card__info .cardinfo__con .info__con .card__mdtxt {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #1F1F2C;
+}
+main .auction .auction__item2 .card .card__info .cardinfo__con .bsc {
+  background: #181b81;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+main .auction .auction__item2 .card:hover {
+  transform: translateY(-40px);
+}
+main .auction .auction__item2 .card:hover .card__btn {
+  visibility: visible;
 }/*# sourceMappingURL=styles.css.map */

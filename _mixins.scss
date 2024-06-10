@@ -12,9 +12,9 @@
 	border-radius: 50px;
 	font-size: 14px;
 	font-weight: 700;
-  font-family: inherit;
+	font-family: inherit;
 	color: $white;
-  text-transform: capitalize;
+	text-transform: capitalize;
 	background: transparent;
 	cursor: pointer;
 	transition: $normal-trans;
@@ -28,6 +28,70 @@
 @mixin btnicon {
 	display: block;
 	font-size: 20px;
+}
+/* -------------------------- cards and subheading -------------------------- */
+@mixin subheadingcon {
+	@include flex-items;
+	justify-content: space-between;
+	padding: 0 15px 15px;
+	color: $black;
+}
+
+@mixin subh-lgtxt {
+	font-size: 36px;
+	text-transform: capitalize;
+}
+
+@mixin subh-smtxt {
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	cursor: pointer;
+	padding-bottom: 4px;
+	border-bottom: 1px solid $txthov;
+	transition: $normal-trans;
+	color: $black;
+
+	&:hover {
+		color: $txthov;
+	}
+}
+
+@mixin card-lgtxt {
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+}
+
+@mixin info-con {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+@mixin info-img {
+	border-radius: 15px;
+}
+
+@mixin card-smtxt {
+	font-size: 14px;
+	text-transform: capitalize;
+	color: $txtgy;
+}
+
+@mixin card-mdtxt {
+	font-size: 16px;
+	text-transform: capitalize;
+	color: $black;
+}
+
+@mixin bscEl {
+	background: $txthov;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: $white;
+	padding: 4px 8px;
+	border-radius: 8px;
 }
 
 /* ------------------------------- media-query ------------------------------ */

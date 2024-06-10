@@ -1,0 +1,129 @@
+@import "var";
+@import "mixins";
+
+main {
+	.auction {
+		padding: 58px 0 68px;
+		// background: #F8F8F8;
+		background: #000;
+
+		.auction__item1 {
+			@include subheadingcon;
+
+			.subh__lgtxt {
+				@include subh-lgtxt;
+			}
+			.subh__smtxt {
+				@include subh-smtxt;
+			}
+		}
+
+		.auction__item2 {
+			padding-top: 24px;
+			margin: 0 auto;
+			@include flex-items;
+
+			.card {
+				background: $white;
+				padding: 20px 20px 13px;
+				border-radius: 25px;
+				position: relative;
+				transition: 1s ease;
+
+				.card__imgcon {
+					position: relative;
+
+					.card__img {
+						border-radius: 20px;
+					}
+
+					.timer {
+						display: flex;
+						align-items: center;
+						text-align: center;
+						background: $white;
+						color: $black;
+						height: 40px;
+						width: 150px;
+						padding: 10px;
+						border-radius: 10px;
+						position: absolute;
+						top: 15.3em;
+						left: 4em;
+
+						.timericon {
+							color: $txthov;
+							font-size: 25px;
+							margin-right: 10px;
+						}
+					}
+
+					.card__btn {
+						@include btn;
+						background: $white;
+						color: $black;
+						position: absolute;
+						top: 9em;
+						left: 4em;
+						visibility: collapse;
+
+						&:hover {
+							background: $txthov;
+							color: $white;
+							border: none;
+						}
+						&:hover .card__btnicon {
+							color: $white;
+						}
+
+						.card__btnicon {
+							color: $txthov;
+							@include btnicon;
+						}
+					}
+				}
+
+				.card__info {
+					margin-top: 1em;
+
+					.card__lgtxt {
+						@include card-lgtxt;
+					}
+
+					.cardinfo__con {
+						@include flex-items;
+						justify-content: space-between;
+
+						.info__con {
+							@include info-con;
+
+							.info__img {
+								@include info-img;
+							}
+
+							.card__smtxt {
+								@include card-smtxt;
+							}
+
+							.card__mdtxt {
+								@include card-mdtxt;
+							}
+						}
+
+						.bsc {
+              @include bscEl;
+						}
+					}
+				}
+
+				&:hover {
+					transform: translateY(-40px);
+				}
+
+				&:hover .card__btn {
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
